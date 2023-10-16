@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/image/cadeado-aberto.png" type="png">
+    <link rel="stylesheet" href="/css/gerador.css">
+    <title>Gerador de senha</title>
+</head>
+    <body>
+         <section>
+            <div class="caixa senha">
+                <label contenteditable="true">SENHA AQUI</label>
+                <img src="/image/copia-de.png" alt="copiar" id="copiar"></img>
+            </div>
+            <nav class="caixa-lista">
+                 <p>
+                     <input type="checkbox" id="personalizar">
+                     <span>Personalizar Senha</span>
+                     <label id="icone" for="personalizar"></label>
+                 </p>
+                 <ul>
+                    <li class="config-senha">
+                        <p class="quantidade-input">
+                            <label>0</label>
+                            <input type="range" name="quantidade" value="0" step="2" min="6" max="12">
+                        </p>
+                    </li>
+                    <li class="config-senha">
+                        <input class="box" type="checkbox" class="input-checkbox" name="0"><span>Caracteres Especiais</span>
+                    </li>
+                    <li class="config-senha">
+                        <input class="box" type="checkbox" class="input-checkbox" name="1"><span>Números</span>
+                    </li>
+                    <li class="config-senha">
+                        <input class="box" type="checkbox" class="input-checkbox" name="2"><span>Letra Maiúscula</span>
+                    </li>
+                    <li class="config-senha">
+                        <input class="box" type="checkbox" class="input-checkbox" name="3"><span>Letra Minúscula</span>
+                    </li>
+                 </ul>
+            </nav>
+            <div class="caixa botoes">
+                <button type="button" data-senha="copia">Gerar Senha</button>
+                <button type="button" data-senha="nova">Nova Senha</button>
+            </div>
+         </section>
+    </body>
+    <script src="/js/index.js"></script>
+</html>
