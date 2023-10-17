@@ -250,7 +250,6 @@ section ul:not(.ativando-pesonalização) {
     gap: 5px;
     margin: 0 auto;
     padding: 5px;
-    border: 2px solid red;
   }
 
   .senha label {
