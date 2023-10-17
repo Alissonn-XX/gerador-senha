@@ -5,7 +5,7 @@
 }
 
 :root {
-  --corFonte: #1c1c1c;
+  --corFonte: #ffeded;
   --corSelecoes: #dcdcdc;
 }
 
@@ -22,7 +22,7 @@ button {
   font-size: 15px;
   font-weight: 500;
   animation: animando-copia 0.2s ease;
-  background: #7ef3c6;
+  background: #9ffdd9;
 }
 
 @keyframes animando-copia {
@@ -55,7 +55,7 @@ button {
 
 .config-senha:has(label) label {
   opacity: 0;
-  color: #360336;
+  color: #ffffff;
 }
 
 p #personalizar {
@@ -95,7 +95,7 @@ section ul:not(.ativando-pesonalização) {
   transition: opacity 1s, height 1s;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
   section {
     display: grid;
     position: absolute;
@@ -207,6 +207,163 @@ section ul:not(.ativando-pesonalização) {
     transform: translate(2px, 2px);
     transition: all 0.5s;
     background: #360336;
+  }
+
+  .box + span {
+    display: inline-block;
+    transform: translateY(-5px);
+    margin: 0 0 0 5px;
+    font-size: 20px;
+  }
+
+  .botoes {
+    padding: 5px 0;
+  }
+
+ .botoes button{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: linear-gradient(rgb(255, 210, 254) 0 0) padding-box,
+      linear-gradient(to right, #9c20aa, #fb3570) border-box;
+    color: #313149;
+    padding: 5px 15px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    display: inline-block;
+  }
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  section {
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    width: 37.5rem;
+    gap: 5px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 2px solid red;
+  }
+
+  .senha label {
+    font-size: 25px;
+    color: var(--corFonte);
+  }
+
+  .senha #copiar {
+    width: 30px;
+    float: right;
+    cursor: pointer;
+    visibility: hidden;
+    transition: visibility 1s;
+    background: var(--corSelecoes);
+  }
+
+  .caixa-lista span {
+    font-size: 25px;
+    color: var(--corFonte);
+  }
+
+  .quantidade-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .quantidade-input input {
+    width: 200px;
+    accent-color: #360336;
+  }
+
+  .senha{
+    width: 98%;
+    grid-column: 1 / 2;
+    text-align: center;
+    border: 2px solid #dcdcdc;
+    background: rgb(224, 143, 187);
+    background-image: linear-gradient(
+      30deg,
+      rgb(224, 143, 187),
+      rgb(211, 70, 209),
+      rgb(111, 64, 207)
+    );
+    box-shadow: 0 0 2px 1px #5f059b;
+    border-radius: 5px;
+  }
+
+  .botoes {
+    width: 100%;
+    grid-column: 1 / -1;
+    text-align: center;
+    border: 2px solid #dcdcdc;
+    background: rgb(224, 143, 187);
+    background-image: linear-gradient(
+      30deg,
+      rgb(224, 143, 187),
+      rgb(211, 70, 209),
+      rgb(111, 64, 207)
+    );
+    box-shadow: 0 0 2px 1px #5f059b;
+    border-radius: 5px;
+  }
+
+  .caixa-lista {
+    width: 100%;
+    grid-column: 2 / -1;
+    background: rgb(224, 143, 187);
+    background-image: linear-gradient(
+      30deg,
+      rgb(224, 143, 187),
+      rgb(211, 70, 209),
+      rgb(111, 64, 207)
+    );
+    border: 2px solid #dcdcdc;
+    box-shadow: 0 0 2px 1px #5f059b;
+    border-radius: 5px;
+  }
+
+  .config-senha {
+    display: inline-block;
+    width: 100%;
+    font-weight: 500;
+    font-size: larger;
+    line-height: -10px;
+    margin: 5px 0;
+  }
+
+  .caixa-lista p {
+    text-align: center;
+  }
+
+  .config-senha .box {
+    display: inline-block;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(229, 228, 228);
+    margin: 0px 0 0 50px;
+    border-radius: 50%;
+  }
+
+  .box:checked::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(2px, 2px);
+    background: #360336;
+    transition: all 1s;
   }
 
   .box + span {
