@@ -2,6 +2,7 @@ const tamanhoSenha = document.querySelector('[name=quantidade]');
 const btnGerarSenha = document.querySelector('[data-senha="copia"]');
 const caixasDeSelecao = document.querySelectorAll('.box');
 const personalizar = document.querySelector('#personalizar');
+const reiniciar = document.querySelector('[data-senha="nova"]')
 let listaElement = document.querySelector('ul')
 let inputCheckedSelecionado = new Set();
 let senha;
@@ -79,18 +80,7 @@ btnGerarSenha.addEventListener('click', ()=>{
   imgCopiar.style.visibility="visible";
 });
 
-const textCopiado  = (elemento)=>{
-  elemento.innerText = 'senha copiada !'
-  imgCopiar.insertAdjacentElement('afterend',elemento)
-  
-  setTimeout(()=>{
-   if(elemento){
-     elemento.remove()
-   }
-  },1000)
-}
-
-imgCopiar.addEventListener('click', () =>{
+const copiandoTexto = () =>{
   let labelSenha = document.querySelector('.senha label')
   let textCopy = document.createElement('span')
   if(labelSenha.innerText.toLowerCase() !== 'senha aqui'){  
@@ -105,9 +95,25 @@ imgCopiar.addEventListener('click', () =>{
      console.log(error);
     }
   }
+}
+
+const textCopiado  = (elemento)=>{
+  elemento.innerText = 'senha copiada !'
+  imgCopiar.insertAdjacentElement('afterend',elemento)
+  
+  
+  setTimeout(()=>{
+    if(elemento){
+      elemento.remove()
+    }
+  },1000)
+}
+
+imgCopiar.addEventListener('click', copiandoTexto)
+
+
+reiniciar.addEventListener('click', ()=>{
+   location.reload()
 })
 
-
-
-
-
+console.log(imgCopiar);
